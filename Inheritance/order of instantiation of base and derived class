@@ -1,0 +1,45 @@
+open class Lvl1(val name : String){
+    init{
+//         println("name is $name")
+        println("LVL1 CLASS INIT")
+    }
+    open fun tellName(){
+        println(this.name)
+	}
+}
+open class Lvl2(name : String) : Lvl1(name){
+    init{
+        println("LVL2 class init")
+    }
+    override fun tellName(){
+        println("Lvl2 class name is $name !!!!")
+    }
+}
+class Lvl3(name : String , val salary : Float) : Lvl2(name){
+    init{
+        println("LVL3 class init")
+    }
+    override fun tellName(){
+        println("inside tellName of Lvl3 ")
+//         super()
+        super.tellName()
+        println("overridden by lvl3 object")
+        println("exit from tellName of Lvl3 ")
+    }
+    fun tellSalary(){
+		println("Salary is $salary")
+    }
+}
+fun main(){
+    val obj1 = Lvl3("Ritik",2333.33F)
+    obj1.tellName()
+}
+
+// output
+LVL1 CLASS INIT
+LVL2 class init
+LVL3 class init
+inside tellName of Lvl3 
+Lvl2 class name is Ritik !!!!
+overridden by lvl3 object
+exit from tellName of Lvl3 
