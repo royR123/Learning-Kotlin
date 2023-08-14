@@ -1,0 +1,26 @@
+fun reformat(
+    str: String,
+    normalizeCase: Boolean = true,
+    upperCaseFirstLetter: Boolean = true,
+    divideByCamelHumps: Boolean = false,
+    wordSeparator: Char = '%',
+) { 
+    println("reformat function \n $str \n $normalizeCase \n $upperCaseFirstLetter \n $divideByCamelHumps \n $wordSeparator ")
+}
+fun main(){
+    format("Ritik" , wordSeparator = '&');
+}
+//Output 
+/*
+  reformat function 
+   String! 
+   true 
+   true 
+   false 
+   & 
+*/
+
+/* Notes
+      -> in named arguments we can change the order at which parameters are written 
+      -> we can omit some or all arguments whose default values are given in function call but if we omit some changes then we must take 
+            named arguments . eg in above example .
